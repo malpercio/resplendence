@@ -1,0 +1,470 @@
+.diamond {
+    border: #fff dotted 5px;
+    background-color: #d1d1d1;
+}
+
+.emerald {
+    border: #50c878 dotted 5px;
+    background-color: #319b54;
+}
+
+.ruby {
+    background-color: #990c41;
+    border: #e0115f dotted 5px;
+}
+
+.sapphire {
+    background-color: #093373;
+    border: #0f52ba dotted 5px;
+}
+
+.gold {
+    background-color: #b39700;
+    border: #ffd700 dotted 5px;
+}
+
+.onyx {
+    background-color: #000;
+    border: #292929 dotted 5px;
+}
+
+.table {
+    display: grid;
+    margin: 0;
+    grid-template: "nobles nobles nobles"15vh "tokens main-board log"70vh "resources resources resources"15vh / 2fr 5fr 0.5fr;
+}
+
+.nobles {
+    position: relative;
+    grid-area: nobles;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tokens {
+    grid-area: tokens;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-board {
+    padding: 1rem;
+    grid-area: main-board;
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    align-items: center;
+}
+
+.resources {
+    background: #ddd;
+    /* border-top-right-radius:10px;
+    border-top-left-radius:10px; */
+    grid-area: resources;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.token {
+    position: relative;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.token__counter {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background-color: white;
+    border-radius: 50%;
+    border: solid black 2px;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.token img {
+    margin: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.noble {
+    background: linear-gradient(45deg, #48c6ef, #6f86d6);
+    border-radius: 15px;
+    padding: 0;
+    width: 9rem;
+    position: relative;
+}
+
+.noble__sidebar {
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    display: block;
+    margin: 0;
+    position: absolute;
+}
+
+.noble__points {
+    font-family: 'Leckerli One', cursive;
+    color: white;
+    font-size: 2em;
+    margin-top: 0;
+    top: 0%;
+    left: 5%;
+    position: absolute;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.noble__price {
+    height: 100%;
+    margin: 0;
+    list-style-type: none;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.noble__cost,
+.resource__token-counter {
+    font-family: 'Leckerli One', cursive;
+    color: white;
+    font-size: 1.4em;
+    border: solid black 1px;
+    border-radius: 50%;
+    width: 1.2em;
+    line-height: 1.2em;
+    margin: 2px;
+    text-align: center;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.card {
+    background: linear-gradient(45deg, #48c6ef, #6f86d6);
+    border-radius: 15px;
+    width: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.card__header {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.card__points,
+.resource__card-counter {
+    font-family: 'Leckerli One', cursive;
+    color: white;
+    font-size: 2em;
+    position: relative;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.card__gem {
+    top: 50%;
+    transform: translate(0%, -50%);
+    right: 10%;
+    text-align: right;
+    position: absolute;
+}
+
+.card__gem img {
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.card__price {
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.card__cost {
+    font-family: 'Leckerli One', cursive;
+    color: white;
+    font-size: 1rem;
+    border: solid black 1px;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 2px;
+    text-align: center;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.resource {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    grid-template: "number token"
+}
+
+.resource__token-counter {
+    grid-area: token;
+    justify-self: center;
+}
+
+.onyx .resource__token-counter {
+    border: solid white 1px;
+}
+
+.resource__card-counter {
+    grid-area: number;
+    border: none;
+    margin: 0 0.2rem;
+}
+
+.resource img {
+    display: none;
+}
+
+.log {
+    background-color: #ddd;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    right: 0%;
+    top: 15vh;
+    width: 50%;
+    height: 70vh;
+    border-top-left-radius: 10px;
+    /* display: grid; */
+    grid-template: "chatlog chatlog"90% "chatlog-box chatlog-actions"10% / 80% 20%
+        /* border-bottom-left-radius:10px; */
+}
+
+.chatlog {
+    grid-area: chatlog;
+    display: grid;
+    grid-auto-rows: fit-content(1rem);
+    grid-auto-columns: auto;
+    padding: 1rem 0.5rem;
+    overflow-y: scroll;
+}
+
+.log-toggle {
+    border-top-left-radius: 10px;
+    display: none;
+    /* display:flex; */
+    border-bottom-left-radius: 10px;
+    background: green;
+    margin: 2rem 1rem;
+    margin-right: 0;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatlog__message {
+    border-radius: 50px;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0.2rem;
+    position: relative;
+    ;
+}
+
+.chatlog__message__body {}
+
+.sent_message {
+    background: green;
+    justify-self: right;
+}
+
+.received_message {
+    background: blue;
+    justify-self: left;
+}
+
+.sent_message .chatlog__message__username {
+    display: none;
+}
+
+.received_message .chatlog__message__username {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.sent_message .chatlog__message__date {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.received_message .chatlog__message__date {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+@media only screen and (min-width:45rem) and (min-height:60rem) {
+
+    /* Computer screen */
+    .table {
+        grid-template: "nobles nobles nobles"15vh "tokens main-board log"70vh "resources resources resources"15vh / 1fr 5fr 2fr;
+    }
+
+    .noble__sidebar {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 40%;
+    }
+
+    .noble__points {
+        left: 25%;
+    }
+
+    .noble__price {
+        flex-direction: column;
+    }
+
+    .tokens {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .token {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .token img {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .card {
+        background: linear-gradient(45deg, #48c6ef, #6f86d6);
+        border-radius: 15px;
+        padding: 0;
+        width: 9rem;
+        height: 12.6rem;
+        position: relative;
+    }
+
+    .card__header {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 30%;
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+
+    .card__points {
+        font-family: 'Leckerli One', cursive;
+        color: white;
+        font-size: 3em;
+        top: 50%;
+        transform: translate(0%, -50%);
+        left: 10%;
+        position: absolute;
+        text-shadow: -1px 1px 0 #000,
+            1px 1px 0 #000,
+            1px -1px 0 #000;
+    }
+
+    .card__gem {
+        top: 50%;
+        transform: translate(0%, -50%);
+        right: 10%;
+        text-align: right;
+        position: absolute;
+    }
+
+    .card__gem img {
+        vertical-align: middle;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .card__price {
+        list-style-type: none;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .card__cost {
+        font-family: 'Leckerli One', cursive;
+        color: white;
+        font-size: 1rem;
+        border: solid black 1px;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 2px;
+        text-align: center;
+        text-shadow: -1px 1px 0 #000,
+            1px 1px 0 #000,
+            1px -1px 0 #000;
+    }
+
+    .resource {
+        padding: 1rem;
+        grid-template: "number icon"
+            "token token";
+    }
+
+    .resource__card-counter {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .resource img {
+        width: 3.5rem;
+        grid-area: icon;
+        display: block;
+    }
+
+    .log {
+        grid-area: log;
+        position: static;
+        width: auto;
+        height: auto;
+        display: grid;
+    }
+
+    .chatlog__message__username {}
+
+    .chatlog__message__body {}
+
+    .chatlog__message__date {}
+
+    .sent_message {}
+
+    .received_message {}
+}

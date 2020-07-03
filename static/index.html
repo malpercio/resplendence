@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resplendence</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="stylesheet" href="shared.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header class="main-header">Resplendence</header>
+        <div id="app-container">
+            <div class="login-box">
+                <span class="box-title">LOGIN</span>
+                <form class="login-form" action="board.html" method="get">
+                    <label for="username">Usuario:</label>
+                    <input type="text" name="username">
+                    <label for="room">Sala:</label>
+                    <input type="text" name="room">
+                    <button class="btn login-form__button" type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+        <div id="portrait-alert">
+            <span class="box-title">ERROR</span>
+
+            <div class="portrait-alert__content">
+                Este sitio está diseñado para ser visto en modo horizontal.
+            </div>
+
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js" charset="utf-8"></script>
+        <script src="index.js" charset="utf-8"></script>
+    </body>
+
+</html>

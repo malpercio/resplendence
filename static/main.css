@@ -1,0 +1,40 @@
+.login-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #f9f9f9;
+    transform: translate(-50%, -50%);
+    border: solid #5757FF 10px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 3rem;
+}
+
+.login-form {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: #f9f9f9;
+    position: relative;
+    grid-row-gap: 1rem;
+    align-items: center;
+}
+
+.login-form__button {
+    grid-column: 1 / span 2;
+}
+
+
+.main-header {
+    color: #5757FF;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Aladin", sans-serif;
+}
+
+@media only screen and (min-width:45rem) and (min-height:60rem){
+    /* Computer screen */
+
+    .main-header {
+        font-size: 8rem;
+    }
+}

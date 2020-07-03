@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Noto Serif", sans-serif;
+    background: #f9f9f9;
+    height: 100%;
+    margin: 0;
+}
+
+#portrait-alert {
+    display: none;
+}
+
+#app-container {
+    display: block;
+    height: 100%;
+    margin: 0;
+}
+
+.box-title {
+    position: absolute;
+    color: #5757FF;
+    background-color: #f9f9f9;
+    font-size: 2rem;
+    top: 0%;
+    left: 0%;
+    transform: translate(-10px, -10px);
+    z-index: 1;
+    padding-right: 0.75rem;
+    padding-down: 0.5rem;
+    font-family: "Leckerli One", sans-serif;
+}
+
+input[type="text"],
+textarea {
+    border: 2px solid #5757ff;
+    background: #f9f9f9;
+    padding: 0.5rem 1rem;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.btn {
+    /* Start reset */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* End reset */
+    font-family: "Noto Serif", sans-serif;
+    /* start `a` element defaults */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    /* end `a` element defaults */
+    /* start custom styling */
+    border: solid 2px transparent;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #5757FF;
+    /* end custom styling */
+}
+
+.btn::-moz-focus-inner {
+    border: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(130%);
+}
+
+.btn:hover,
+.btn:focus {
+    color: #5757FF;
+    border-color: currentColor;
+    background-color: #F0F0FF;
+}
+
+.backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+}
+
+.show {
+    display: block;
+}
+
+.no-show {
+    display: none;
+}
+
+@media only screen and (orientation:portrait) {
+    #portrait-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 20rem;
+        display: block;
+        transform: translate(-50%, -50%);
+    }
+
+    .portrait-alert__content {
+        border-radius: 10px;
+        padding: 2.5rem;
+        border: #5757FF solid 10px;
+        font-size: 1.3rem;
+        text-align: justify;
+        font-family: "Noto Serif", sans-serif;
+    }
+
+    #app-container {
+        display: none;
+    }
+}

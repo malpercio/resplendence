@@ -1,0 +1,39 @@
+{
+    "name": "resplendence",
+    "version": "1.0.0",
+    "description": "Implementation of Splendor",
+    "main": "index.js",
+    "scripts":
+    {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js",
+        "start": "node index.js",
+        "populate": "node scripts/populate.js"
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "git+https://github.com/malpercio/resplendence.git"
+    },
+    "author": "malpercio",
+    "license": "MIT",
+    "bugs":
+    {
+        "url": "https://github.com/malpercio/resplendence/issues"
+    },
+    "homepage": "https://github.com/malpercio/resplendence#readme",
+    "dependencies":
+    {
+        "chalk": "^4.1.0",
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "mongoose": "^5.9.18",
+        "socketio": "^1.0.0",
+        "winston": "^3.2.1"
+    },
+    "devDependencies":
+    {
+        "eslint": "^7.2.0",
+        "nodemon": "^2.0.4"
+    }
+}
